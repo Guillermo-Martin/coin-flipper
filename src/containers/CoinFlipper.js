@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import Coin from './../components/Coin';
 
 class CoinFlipper extends Component {
-  // static defaultProps = {
-  //   face: "http://www.pcgscoinfacts.com/UserImages/71009269r.jpg",
-  //   alt: "tails"
-  // }
-
+  
   state = {
-    face: "http://www.pcgscoinfacts.com/UserImages/71009269r.jpg",
+    face: "https://www.pcgs.com/UserImages/71009269r.jpg",
     alt: "tails",
     flips: 0,
     tails: 0,
@@ -22,7 +18,7 @@ class CoinFlipper extends Component {
     this.setState(curState => ({ flips: curState.flips + 1}));
     // if randomNum is 1, display heads; otherwise, display tails
     if(randomNum === 1) {
-      this.setState({ face: "http://www.pcgscoinfacts.com/UserImages/71009269r.jpg", alt: "tails" });
+      this.setState({ face: "https://www.pcgs.com/UserImages/71009269r.jpg", alt: "tails" });
       this.setState(curState => ({ tails: curState.tails + 1}));
     } else {
       this.setState({ face: "https://upload.wikimedia.org/wikipedia/commons/c/cd/S_Half_Dollar_Obverse_2016.jpg", alt: "heads"});
