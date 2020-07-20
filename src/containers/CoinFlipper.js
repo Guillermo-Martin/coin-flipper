@@ -16,7 +16,7 @@ class CoinFlipper extends Component {
     let randomNum = Math.floor((Math.random() * 2) + 1);
     // add 1 to the 'flips' count
     this.setState(curState => ({ flips: curState.flips + 1}));
-    // if randomNum is 1, display heads; otherwise, display tails
+    // if randomNum is 1, display tails; otherwise, display heads
     if(randomNum === 1) {
       this.setState({ face: "https://www.pcgs.com/UserImages/71009269r.jpg", alt: "tails" });
       this.setState(curState => ({ tails: curState.tails + 1}));
